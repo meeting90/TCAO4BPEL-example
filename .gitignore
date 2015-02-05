@@ -1,0 +1,24 @@
+# for those of us using git internally
+# before committing in the central svn repository.
+
+*.class
+*.pyc
+*.iml
+*.ipr
+*.iws
+*.zip
+*.jar
+*.orig
+*.rej
+*~
+.settings
+.classpath
+.project
+.metadata
+bin
+target
+reports
+test-output
+_buildr.rb
+derby.log
+Server*
