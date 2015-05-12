@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<aspect name="sorting" targetNamespace="http://cs.nju.edu.cn/tcao4bpel/2.0/aspect/sorting" bpelurl="{http://cs.nju.edu.cn/tcao4bpel/travel}Travel" xmlns="http://cs.nju.edu.cn/tcao4bpel/2.0/aspect" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+>
+	<pointcut>
+		<preCondition>
+			<place state="finished">activity(name = "selectFlight")</place>
+			<place state="finished">activity(name = "searchHotel")</place>
+		</preCondition>
+		<postCondition >
+			<place state="initial">activity(name= "selectHotel")</place>
+		</postCondition>
+	</pointcut>
+
+<advice name="sorting" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0" queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0" suppressJoinFailure="yes" targetNamespace="http://cs.nju.edu.cn/tcao4bpel/travel/sorting" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:common="http://xsd.webservices.cs.nju.edu.cn/xsd" xmlns:hotel="http://hotel.webservices.cs.nju.edu.cn" xmlns:flight="http://flight.webservices.cs.nju.edu.cn" xmlns:tns="http://cs.nju.edu.cn/tcao4bpel/travel/sorting">
+	<bpel:import importType="http://www.w3.org/2001/XMLSchema" location="common.xsd" namespace="http://xsd.webservices.cs.nju.edu.cn/xsd"/>
+	<bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="HotelService.wsdl" namespace="http://hotel.webservices.cs.nju.edu.cn"/>
+	<bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="SortArtifacts.wsdl" namespace="http://cs.nju.edu.cn/tcao4bpel/travel/sorting"/>
+	<bpel:partnerLinks>
+	
+		<bpel:partnerLink name="sortPartner" partnerLinkType="tns:Hotel" partnerRole="HotelProvider"/>
+	
+	</bpel:partnerLinks>
+	<bpel:variables>
+	
+		<bpel:variable messageType="hotel:sortRequest" name="sortRequest"/>
+		<bpel:variable messageType="hotel:sortResponse" name="sortResponse"/>
+	</bpel:variables>
+
+		<bpel:sequence name="sort">
+
+				<bpel:assign name="prepareSortInput">
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<ns:sortResponse xmlns:ns="http://hotel.webservices.cs.nju.edu.cn" xmlns:tns="http://xsd.webservices.cs.nju.edu.cn/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+									<ns:return>
+										<tns:children>
+											<tns:city>tns:city</tns:city>
+											<tns:position>tns:position</tns:position>
+											<tns:price>0.0</tns:price>
+										</tns:children>
+									</ns:return>
+								</ns:sortResponse>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to part="parameters" variable="sortResponse"/>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<ns:sort xmlns:ns="http://hotel.webservices.cs.nju.edu.cn" xmlns:tns="http://xsd.webservices.cs.nju.edu.cn/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+									<ns:info>
+										<tns:airline>tns:airline</tns:airline>
+										<tns:arrival>tns:arrival</tns:arrival>
+										<tns:arrivalAirport>tns:arrivalAirport</tns:arrivalAirport>
+										<tns:arrivalTime>2001-01-01</tns:arrivalTime>
+										<tns:deloyTime>0</tns:deloyTime>
+										<tns:departure>tns:departure</tns:departure>
+										<tns:departureAirport>tns:departureAirport</tns:departureAirport>
+										<tns:departureTime>2001-01-01</tns:departureTime>
+										<tns:flightId>tns:flightId</tns:flightId>
+										<tns:price>0.0</tns:price>
+										<tns:punctuality>0</tns:punctuality>
+									</ns:info>
+									<ns:hotels>
+										<tns:children>
+											<tns:city>tns:city</tns:city>
+											<tns:position>tns:position</tns:position>
+											<tns:price>0.0</tns:price>
+										</tns:children>
+									</ns:hotels>
+								</ns:sort>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to part="parameters" variable="sortRequest"/>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$selectFlightResponse.parameters/flight:return</bpel:from>
+						<bpel:to>$sortRequest.parameters/hotel:info</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$searchHotelResponse.parameters/hotel:return</bpel:from>
+						<bpel:to>$sortRequest.parameters/hotel:hotels</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+				<bpel:invoke inputVariable="sortRequest" name="sort" operation="sort" outputVariable="sortResponse" partnerLink="sortPartner"/>
+				<bpel:assign>
+					<bpel:copy>
+						<bpel:from>$sortResponse.parameters/hotel:return</bpel:from>
+						<bpel:to>$selectHotelRequest.parameters/hotel:hotels</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+              
+		</bpel:sequence>
+</advice>
+</aspect>

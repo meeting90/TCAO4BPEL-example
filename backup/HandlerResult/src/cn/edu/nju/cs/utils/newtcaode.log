@@ -1,0 +1,1928 @@
+2015-02-11 18:16:12,172 [localhost-startStop-1] ERROR org.apache.ode.store.ProcessStoreImpl  - Error while activating process: pid={http://cs.nju.edu.cn/tcao4bpel/travel}Travel-1 package=TravelProcessNew
+org.apache.ode.bpel.iapi.ContextException: Could not activate endpoint for service {http://cs.nju.edu.cn/tcao4bpel/travel}TravelService and port TravelPort
+	at org.apache.ode.axis2.BindingContextImpl.activateMyRoleEndpoint(BindingContextImpl.java:83)
+	at org.apache.ode.bpel.engine.BpelProcess.activate(BpelProcess.java:620)
+	at org.apache.ode.bpel.engine.BpelEngineImpl.registerProcess(BpelEngineImpl.java:361)
+	at org.apache.ode.bpel.engine.BpelServerImpl.register(BpelServerImpl.java:321)
+	at org.apache.ode.axis2.ODEServer.handleEvent(ODEServer.java:707)
+	at org.apache.ode.axis2.ODEServer.access$100(ODEServer.java:93)
+	at org.apache.ode.axis2.ODEServer$ProcessStoreListenerImpl.onProcessStoreEvent(ODEServer.java:681)
+	at org.apache.ode.store.ProcessStoreImpl.fireEvent(ProcessStoreImpl.java:592)
+	at org.apache.ode.store.ProcessStoreImpl.fireStateChange(ProcessStoreImpl.java:598)
+	at org.apache.ode.store.ProcessStoreImpl.loadAll(ProcessStoreImpl.java:563)
+	at org.apache.ode.axis2.ODEServer.init(ODEServer.java:210)
+	at org.apache.ode.axis2.ODEServer.init(ODEServer.java:147)
+	at org.apache.ode.axis2.ODEServer.init(ODEServer.java:143)
+	at org.apache.ode.axis2.hooks.ODEAxisServlet.init(ODEAxisServlet.java:53)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1284)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1197)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1087)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5210)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5493)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:632)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1229)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1875)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.axis2.AxisFault: CBP record not found for type {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	at org.apache.axis2.AxisFault.makeFault(AxisFault.java:430)
+	at org.apache.ode.axis2.hooks.ODEAxisService.createService(ODEAxisService.java:147)
+	at org.apache.ode.axis2.BindingContextImpl.createService(BindingContextImpl.java:120)
+	at org.apache.ode.axis2.BindingContextImpl.activateMyRoleEndpoint(BindingContextImpl.java:78)
+	... 29 more
+Caused by: org.apache.ode.bpel.iapi.ContextException: CBP record not found for type {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	at org.apache.ode.store.ProcessConfImpl.getBpelDocument(ProcessConfImpl.java:283)
+	at org.apache.ode.axis2.hooks.ODEAxisService.deriveBaseServiceUri(ODEAxisService.java:354)
+	at org.apache.ode.axis2.hooks.ODEAxisService.extractServiceName(ODEAxisService.java:229)
+	at org.apache.ode.axis2.hooks.ODEAxisService.createService(ODEAxisService.java:90)
+	... 31 more
+2015-02-11 18:16:22,413 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:38:62:cvc-complex-type.2.4.a: Invalid content was found starting with element 'bpel:to'. One of '{"http://docs.oasis-open.org/wsbpel/2.0/process/executable":documentation, WC[##other:"http://docs.oasis-open.org/wsbpel/2.0/process/executable"], "http://docs.oasis-open.org/wsbpel/2.0/process/executable":from}' is expected.
+2015-02-11 18:16:22,416 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:40:48:cvc-complex-type.3.2.2: Attribute 'xml:space' is not allowed to appear in element 'bpel:literal'.
+2015-02-11 18:16:22,425 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:88:74:cvc-complex-type.2.4.a: Invalid content was found starting with element 'bpel:to'. One of '{"http://docs.oasis-open.org/wsbpel/2.0/process/executable":documentation, WC[##other:"http://docs.oasis-open.org/wsbpel/2.0/process/executable"], "http://docs.oasis-open.org/wsbpel/2.0/process/executable":from}' is expected.
+2015-02-11 18:16:22,448 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:90:52:cvc-complex-type.3.2.2: Attribute 'xml:space' is not allowed to appear in element 'bpel:literal'.
+2015-02-11 18:16:22,461 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:122:52:cvc-complex-type.3.2.2: Attribute 'xml:space' is not allowed to appear in element 'bpel:literal'.
+2015-02-11 18:16:22,466 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:154:72:cvc-complex-type.2.4.a: Invalid content was found starting with element 'bpel:to'. One of '{"http://docs.oasis-open.org/wsbpel/2.0/process/executable":documentation, WC[##other:"http://docs.oasis-open.org/wsbpel/2.0/process/executable"], "http://docs.oasis-open.org/wsbpel/2.0/process/executable":from}' is expected.
+2015-02-11 18:16:22,481 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:156:52:cvc-complex-type.3.2.2: Attribute 'xml:space' is not allowed to appear in element 'bpel:literal'.
+2015-02-11 18:16:22,502 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:197:73:cvc-complex-type.2.4.a: Invalid content was found starting with element 'bpel:to'. One of '{"http://docs.oasis-open.org/wsbpel/2.0/process/executable":documentation, WC[##other:"http://docs.oasis-open.org/wsbpel/2.0/process/executable"], "http://docs.oasis-open.org/wsbpel/2.0/process/executable":from}' is expected.
+2015-02-11 18:16:22,520 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:199:52:cvc-complex-type.3.2.2: Attribute 'xml:space' is not allowed to appear in element 'bpel:literal'.
+2015-02-11 18:16:22,523 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:222:52:cvc-complex-type.3.2.2: Attribute 'xml:space' is not allowed to appear in element 'bpel:literal'.
+2015-02-11 18:16:22,531 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:267:74:cvc-complex-type.2.4.a: Invalid content was found starting with element 'bpel:to'. One of '{"http://docs.oasis-open.org/wsbpel/2.0/process/executable":documentation, WC[##other:"http://docs.oasis-open.org/wsbpel/2.0/process/executable"], "http://docs.oasis-open.org/wsbpel/2.0/process/executable":from}' is expected.
+2015-02-11 18:16:22,536 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:269:52:cvc-complex-type.3.2.2: Attribute 'xml:space' is not allowed to appear in element 'bpel:literal'.
+2015-02-11 18:16:22,546 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:302:54:cvc-complex-type.2.4.a: Invalid content was found starting with element 'bpel:to'. One of '{"http://docs.oasis-open.org/wsbpel/2.0/process/executable":documentation, WC[##other:"http://docs.oasis-open.org/wsbpel/2.0/process/executable"], "http://docs.oasis-open.org/wsbpel/2.0/process/executable":from}' is expected.
+2015-02-11 18:16:22,547 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory$BOMSAXErrorHandler  - null:file:///usr/local/apache-tomcat-7.0.53/webapps/ode/WEB-INF/processes/TravelProcessNew/Travel.bpel:304:48:cvc-complex-type.3.2.2: Attribute 'xml:space' is not allowed to appear in element 'bpel:literal'.
+2015-02-11 18:16:22,552 [DeploymentPoller] WARN  org.apache.ode.bpel.compiler.bom.BpelObjectFactory  - Validation errors during parsing, continuing due to -Dorg.apache.ode.compiler.failOnValidationErrors=false switch
+2015-02-11 18:16:28,348 [ODEServer-2] WARN  org.apache.ode.scheduler.simple.SimpleScheduler  - Dispatching jobs with more than 5 minutes delay. Either the server was down for some time or the job load is greater than available capacity
+2015-02-11 18:17:26,487 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 801
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 751
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:26 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:17:30,526 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 809
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 752
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:30 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:17:30,800 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 751
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:30 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:17:32,613 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 817
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 753
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:32 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:17:32,882 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 752
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:32 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:17:34,519 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 753
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:34 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:17:38,861 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 825
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 754
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:38 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:17:40,554 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 754
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:40 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:17:43,561 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 833
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 755
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:43 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:17:45,074 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 755
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:45 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:17:47,737 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 841
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 756
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:47 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:17:48,938 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 756
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:48 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:17:50,701 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 849
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 757
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:50 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:17:51,905 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 757
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:51 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:17:53,860 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 2557
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 758
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:53 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:17:54,820 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 758
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:54 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:17:56,973 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 2565
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 759
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:56 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:17:57,944 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 759
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:17:57 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:18:01,384 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 2573
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 760
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:18:01 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:18:02,471 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 760
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:18:02 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:18:04,674 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 2581
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 761
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:18:04 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:18:05,740 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 761
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:18:05 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:18:07,295 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 2589
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 762
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:18:07 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:18:08,320 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 762
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:18:08 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:18:10,355 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 2597
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 763
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:18:10 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:18:12,022 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 763
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:18:12 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:18:38,432 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 4355
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 764
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:18:38 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:18:41,292 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 4363
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 765
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:18:41 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:18:41,702 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 764
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:18:41 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:18:44,404 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 765
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:18:44 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:18:47,498 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 4373
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 766
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:18:47 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:18:50,320 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 766
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:18:50 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:18:52,192 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 4382
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 767
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:18:52 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:18:55,012 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 767
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:18:55 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:18:56,549 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 4391
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 768
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:18:56 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:18:59,239 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 768
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:18:59 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:19:00,782 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 4400
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 769
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:00 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:19:02,677 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 769
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:02 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:19:05,489 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 6159
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 770
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:05 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:19:07,365 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 770
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:07 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:19:09,277 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 6168
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 771
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:09 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:19:11,929 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 771
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:11 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:19:13,871 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 6177
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 772
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:13 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:19:16,619 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 772
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:16 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:19:18,981 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 6186
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 773
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:18 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:19:21,705 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 773
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:21 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:19:24,096 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 6195
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 774
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:24 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:19:26,756 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 774
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:26 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:19:36,001 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 7954
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 775
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:36 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:19:38,577 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 775
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:19:38 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:08,679 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 7963
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 776
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:08 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:11,315 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 776
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:11 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:13,700 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 7972
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 777
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:13 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:16,168 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 777
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:16 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:17,382 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 7981
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 778
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:17 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:20,091 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 778
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:20 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:21,995 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 7990
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 779
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:21 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:24,608 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 779
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:24 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:26,017 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 7999
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 780
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:26 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:28,503 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 780
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:28 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:30,014 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 9808
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 781
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:30 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:32,530 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 781
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:32 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:34,070 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 9817
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 782
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:34 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:36,511 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 782
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:36 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:38,101 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 9826
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 783
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:38 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:40,592 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 783
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:40 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:42,190 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 9835
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 784
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:42 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:44,205 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 784
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:44 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:45,901 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 9844
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 785
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:45 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:48,396 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 785
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:48 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:50,221 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 11553
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 786
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:50 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:52,772 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 786
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:52 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:54,954 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 11562
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 787
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:54 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:20:57,317 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 787
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:57 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:20:59,749 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 11571
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 788
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:20:59 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:21:02,222 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 788
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:21:02 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:21:03,771 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 11580
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 789
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:21:03 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:21:06,247 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 789
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:21:06 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:21:07,533 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 11589
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 790
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:21:07 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:21:09,975 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 790
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:21:09 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:21:12,139 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 11598
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 791
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:21:12 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:21:13,660 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 791
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:21:13 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:21:15,763 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 13357
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 792
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:21:15 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:21:18,253 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 792
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:21:18 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:39:21,896 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 13366
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 793
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:39:21 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:39:22,572 [ODEServer-8] ERROR org.apache.ode.bpel.runtime.INVOKE  - Failure during invoke: 
+2015-02-11 18:39:23,597 [ODEServer-5] ERROR org.apache.ode.bpel.runtime.INVOKE  - Failure during invoke: 
+2015-02-11 18:41:21,877 [http-bio-8080-exec-1] ERROR org.apache.ode.axis2.ODEService  - Timeout or execution error when waiting for response to MEX {MyRoleMex#hqejbhcnphra1lu1a2pd8l [Client hqejbhcnphra1lu1a2pd8k] calling {http://cs.nju.edu.cn/tcao4bpel/travel}TravelServiceCase1.travelOrder(...)} java.util.concurrent.TimeoutException: Message exchange org.apache.ode.bpel.engine.MyRoleMessageExchangeImpl$ResponseFuture@594fead1 timed out(120000 ms) when waiting for a response!
+java.util.concurrent.TimeoutException: Message exchange org.apache.ode.bpel.engine.MyRoleMessageExchangeImpl$ResponseFuture@594fead1 timed out(120000 ms) when waiting for a response!
+	at org.apache.ode.bpel.engine.MyRoleMessageExchangeImpl$ResponseFuture.get(MyRoleMessageExchangeImpl.java:252)
+	at org.apache.ode.axis2.ODEService.onAxisMessageExchange(ODEService.java:171)
+	at org.apache.ode.axis2.hooks.ODEMessageReceiver.invokeBusinessLogic(ODEMessageReceiver.java:69)
+	at org.apache.ode.axis2.hooks.ODEMessageReceiver.invokeBusinessLogic(ODEMessageReceiver.java:52)
+	at org.apache.axis2.receivers.AbstractMessageReceiver.receive(AbstractMessageReceiver.java:114)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:173)
+	at org.apache.axis2.transport.http.HTTPTransportUtils.processHTTPPostRequest(HTTPTransportUtils.java:167)
+	at org.apache.axis2.transport.http.AxisServlet.doPost(AxisServlet.java:142)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:646)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-02-11 18:55:14,598 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 14301
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14251
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:14 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:19,980 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14251
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:19 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:24,110 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 14309
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14252
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:24 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:26,297 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14252
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:26 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:28,228 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 14317
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14253
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:28 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:29,713 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14253
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:29 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:31,339 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 14325
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14254
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:31 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:33,030 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14254
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:33 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:35,528 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 14333
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14255
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:35 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:36,852 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14255
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:36 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:38,559 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 14341
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14256
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:38 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:39,705 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14256
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:39 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:41,467 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 14349
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14257
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:41 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:42,613 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14257
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:42 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:44,183 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 16057
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14258
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:44 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:45,396 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14258
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:45 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:47,131 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 16065
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14259
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:47 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:48,050 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14259
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:48 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:49,840 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 16073
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14260
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:49 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:51,619 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14260
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:51 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:53,264 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 16081
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14261
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:53 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:54,189 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14261
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:54 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:55,805 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 16089
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14262
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:55 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:56,914 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14262
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:56 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:55:58,361 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 16097
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14263
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:58 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:55:59,985 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14263
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:55:59 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:56:01,317 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 17855
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14264
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:56:01 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:56:02,866 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14264
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:56:02 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:56:04,319 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 17863
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14265
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:56:04 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:56:05,937 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14265
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel-4
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}Travel
+	Timestamp = Wed Feb 11 18:56:05 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:56:34,495 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 17871
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14266
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:34 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:56:36,147 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14266
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:36 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:56:37,773 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 17880
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14267
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:37 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:56:40,363 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14267
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:40 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:56:40,990 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 17889
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14268
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:40 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:56:43,683 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14268
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:43 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:56:44,296 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 17898
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14269
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:44 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:56:46,779 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14269
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:46 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:56:47,382 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 19657
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14270
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:47 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:56:49,228 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14270
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:49 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:56:50,782 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 19666
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14271
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:50 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:56:53,241 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14271
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:53 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:56:53,716 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 19675
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14272
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:53 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:56:56,418 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14272
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:56:56 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:57:03,139 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 19684
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14273
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:03 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:57:05,767 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14273
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:05 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:57:07,656 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 19693
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14274
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:07 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:57:10,286 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14274
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:10 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:57:12,214 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 21402
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14275
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:12 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:57:14,783 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14275
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:14 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:57:16,498 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 21411
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14276
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:16 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:57:19,099 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14276
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:19 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:57:20,781 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 21420
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14277
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:20 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:57:23,262 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14277
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:23 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:57:24,537 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 21429
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14278
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:24 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:57:27,048 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14278
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:27 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:57:28,965 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 21438
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14279
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:28 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:57:31,498 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14279
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1-2
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase1
+	Timestamp = Wed Feb 11 18:57:31 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:58:05,481 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 21447
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14280
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:05 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:58:08,270 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14280
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:08 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:58:09,960 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 23256
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14281
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:09 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:58:10,454 [ODEServer-3] WARN  org.apache.ode.bpel.runtime.SCOPE  - ({OScope '__PROCESS_SCOPE:TravelCase2' id=3},Termination#19,ParentScope#20): has a fault handler for {http://docs.oasis-open.org/wsbpel/2.0/process/executable}selectionFailure: {OCatch faultName=null, faultVariable=null} ,  FaultData: [faultName={http://docs.oasis-open.org/wsbpel/2.0/process/executable}selectionFailure, faulType=null (No results for expression: '$selectHotelRequest.parameters/hotel:hotels' against '<?xml version="1.0" encoding="UTF-8"?>
+<message><parameters><selectHotel xmlns="http://hotel.webservices.cs.nju.edu.cn"/></parameters></message>')] @365
+2015-02-11 18:58:10,466 [ODEServer-3] ERROR org.apache.ode.bpel.engine.BpelEngineImpl  - Scheduled job failed; jobDetail=JobDetails( instanceId: 14281 mexId: hqejbhcnphra1lwr9w3wv6 processId: null type: INVOKE_RESPONSE channel: 119 correlatorId: null correlationKeySet: null retryCount: null inMem: false detailsExt: {})
+java.lang.NullPointerException
+	at cn.edu.nju.cs.tcao4bpel.runtime.ProcessStateMonitor.routeEvent(ProcessStateMonitor.java:30)
+	at org.apache.ode.bpel.runtime.ACTIVITY.sendEvent(ACTIVITY.java:100)
+	at org.apache.ode.bpel.runtime.ACTIVITYGUARD.run(ACTIVITYGUARD.java:85)
+	at sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.ode.jacob.vpu.JacobVPU$JacobThreadImpl.run(JacobVPU.java:438)
+	at org.apache.ode.jacob.vpu.JacobVPU.execute(JacobVPU.java:112)
+	at org.apache.ode.bpel.engine.BpelRuntimeContextImpl.execute(BpelRuntimeContextImpl.java:916)
+	at org.apache.ode.bpel.engine.BpelProcess.handleJobDetails(BpelProcess.java:481)
+	at org.apache.ode.bpel.engine.BpelEngineImpl.onScheduledJob(BpelEngineImpl.java:506)
+	at org.apache.ode.bpel.engine.BpelServerImpl.onScheduledJob(BpelServerImpl.java:450)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob$1.call(SimpleScheduler.java:546)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob$1.call(SimpleScheduler.java:540)
+	at org.apache.ode.scheduler.simple.SimpleScheduler.execTransaction(SimpleScheduler.java:289)
+	at org.apache.ode.scheduler.simple.SimpleScheduler.execTransaction(SimpleScheduler.java:244)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob.call(SimpleScheduler.java:540)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob.call(SimpleScheduler.java:524)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-02-11 18:58:11,789 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14281
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:11 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:58:28,623 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 23269
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14282
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:28 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:58:31,220 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14282
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:31 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:58:32,924 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 23278
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14283
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:32 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:58:37,058 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14283
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:37 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:58:38,830 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 23287
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14284
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:38 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:58:41,600 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14284
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:41 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:58:43,972 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 23296
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14285
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:43 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:58:44,639 [ODEServer-4] WARN  org.apache.ode.bpel.runtime.SCOPE  - ({OScope '__PROCESS_SCOPE:TravelCase2' id=3},Termination#19,ParentScope#20): has a fault handler for {http://docs.oasis-open.org/wsbpel/2.0/process/executable}selectionFailure: {OCatch faultName=null, faultVariable=null} ,  FaultData: [faultName={http://docs.oasis-open.org/wsbpel/2.0/process/executable}selectionFailure, faulType=null (No results for expression: '$selectHotelRequest.parameters/hotel:hotels' against '<?xml version="1.0" encoding="UTF-8"?>
+<message><parameters><selectHotel xmlns="http://hotel.webservices.cs.nju.edu.cn"/></parameters></message>')] @365
+2015-02-11 18:58:44,656 [ODEServer-4] ERROR org.apache.ode.bpel.engine.BpelEngineImpl  - Scheduled job failed; jobDetail=JobDetails( instanceId: 14285 mexId: hqejbhcnphra1lwr9w3x1e processId: null type: INVOKE_RESPONSE channel: 119 correlatorId: null correlationKeySet: null retryCount: null inMem: false detailsExt: {})
+java.lang.NullPointerException
+	at cn.edu.nju.cs.tcao4bpel.runtime.ProcessStateMonitor.routeEvent(ProcessStateMonitor.java:30)
+	at org.apache.ode.bpel.runtime.ACTIVITY.sendEvent(ACTIVITY.java:100)
+	at org.apache.ode.bpel.runtime.ACTIVITYGUARD.run(ACTIVITYGUARD.java:85)
+	at sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.ode.jacob.vpu.JacobVPU$JacobThreadImpl.run(JacobVPU.java:438)
+	at org.apache.ode.jacob.vpu.JacobVPU.execute(JacobVPU.java:112)
+	at org.apache.ode.bpel.engine.BpelRuntimeContextImpl.execute(BpelRuntimeContextImpl.java:916)
+	at org.apache.ode.bpel.engine.BpelProcess.handleJobDetails(BpelProcess.java:481)
+	at org.apache.ode.bpel.engine.BpelEngineImpl.onScheduledJob(BpelEngineImpl.java:506)
+	at org.apache.ode.bpel.engine.BpelServerImpl.onScheduledJob(BpelServerImpl.java:450)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob$1.call(SimpleScheduler.java:546)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob$1.call(SimpleScheduler.java:540)
+	at org.apache.ode.scheduler.simple.SimpleScheduler.execTransaction(SimpleScheduler.java:289)
+	at org.apache.ode.scheduler.simple.SimpleScheduler.execTransaction(SimpleScheduler.java:244)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob.call(SimpleScheduler.java:540)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob.call(SimpleScheduler.java:524)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-02-11 18:58:45,988 [ODEServer-4] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14285
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:45 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:58:47,867 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 24958
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14286
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:47 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:58:50,542 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14286
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:50 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:58:52,452 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 24967
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14287
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:52 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:58:55,092 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14287
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:55 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:58:56,683 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 24976
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14288
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:56 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:58:59,304 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14288
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:58:59 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:59:00,796 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 24985
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14289
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:00 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:59:01,272 [ODEServer-6] WARN  org.apache.ode.bpel.runtime.SCOPE  - ({OScope '__PROCESS_SCOPE:TravelCase2' id=3},Termination#19,ParentScope#20): has a fault handler for {http://docs.oasis-open.org/wsbpel/2.0/process/executable}selectionFailure: {OCatch faultName=null, faultVariable=null} ,  FaultData: [faultName={http://docs.oasis-open.org/wsbpel/2.0/process/executable}selectionFailure, faulType=null (No results for expression: '$selectHotelRequest.parameters/hotel:hotels' against '<?xml version="1.0" encoding="UTF-8"?>
+<message><parameters><selectHotel xmlns="http://hotel.webservices.cs.nju.edu.cn"/></parameters></message>')] @365
+2015-02-11 18:59:01,276 [ODEServer-6] ERROR org.apache.ode.bpel.engine.BpelEngineImpl  - Scheduled job failed; jobDetail=JobDetails( instanceId: 14289 mexId: hqejbhcnphra1lwr9w3x5m processId: null type: INVOKE_RESPONSE channel: 119 correlatorId: null correlationKeySet: null retryCount: null inMem: false detailsExt: {})
+java.lang.NullPointerException
+	at cn.edu.nju.cs.tcao4bpel.runtime.ProcessStateMonitor.routeEvent(ProcessStateMonitor.java:30)
+	at org.apache.ode.bpel.runtime.ACTIVITY.sendEvent(ACTIVITY.java:100)
+	at org.apache.ode.bpel.runtime.ACTIVITYGUARD.run(ACTIVITYGUARD.java:85)
+	at sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.ode.jacob.vpu.JacobVPU$JacobThreadImpl.run(JacobVPU.java:438)
+	at org.apache.ode.jacob.vpu.JacobVPU.execute(JacobVPU.java:112)
+	at org.apache.ode.bpel.engine.BpelRuntimeContextImpl.execute(BpelRuntimeContextImpl.java:916)
+	at org.apache.ode.bpel.engine.BpelProcess.handleJobDetails(BpelProcess.java:481)
+	at org.apache.ode.bpel.engine.BpelEngineImpl.onScheduledJob(BpelEngineImpl.java:506)
+	at org.apache.ode.bpel.engine.BpelServerImpl.onScheduledJob(BpelServerImpl.java:450)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob$1.call(SimpleScheduler.java:546)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob$1.call(SimpleScheduler.java:540)
+	at org.apache.ode.scheduler.simple.SimpleScheduler.execTransaction(SimpleScheduler.java:289)
+	at org.apache.ode.scheduler.simple.SimpleScheduler.execTransaction(SimpleScheduler.java:244)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob.call(SimpleScheduler.java:540)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob.call(SimpleScheduler.java:524)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-02-11 18:59:02,531 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14289
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:02 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:59:04,154 [ODEServer-5] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 24998
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14290
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:04 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:59:06,851 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14290
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:06 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:59:08,770 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 26657
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14291
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:08 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:59:11,469 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14291
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:11 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:59:13,553 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 26666
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14292
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:13 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:59:14,423 [ODEServer-6] WARN  org.apache.ode.bpel.runtime.SCOPE  - ({OScope '__PROCESS_SCOPE:TravelCase2' id=3},Termination#19,ParentScope#20): has a fault handler for {http://docs.oasis-open.org/wsbpel/2.0/process/executable}selectionFailure: {OCatch faultName=null, faultVariable=null} ,  FaultData: [faultName={http://docs.oasis-open.org/wsbpel/2.0/process/executable}selectionFailure, faulType=null (No results for expression: '$selectHotelRequest.parameters/hotel:hotels' against '<?xml version="1.0" encoding="UTF-8"?>
+<message><parameters><selectHotel xmlns="http://hotel.webservices.cs.nju.edu.cn"/></parameters></message>')] @365
+2015-02-11 18:59:14,426 [ODEServer-6] ERROR org.apache.ode.bpel.engine.BpelEngineImpl  - Scheduled job failed; jobDetail=JobDetails( instanceId: 14292 mexId: hqejbhcnphra1lwr9w3x8s processId: null type: INVOKE_RESPONSE channel: 119 correlatorId: null correlationKeySet: null retryCount: null inMem: false detailsExt: {})
+java.lang.NullPointerException
+	at cn.edu.nju.cs.tcao4bpel.runtime.ProcessStateMonitor.routeEvent(ProcessStateMonitor.java:30)
+	at org.apache.ode.bpel.runtime.ACTIVITY.sendEvent(ACTIVITY.java:100)
+	at org.apache.ode.bpel.runtime.ACTIVITYGUARD.run(ACTIVITYGUARD.java:85)
+	at sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.ode.jacob.vpu.JacobVPU$JacobThreadImpl.run(JacobVPU.java:438)
+	at org.apache.ode.jacob.vpu.JacobVPU.execute(JacobVPU.java:112)
+	at org.apache.ode.bpel.engine.BpelRuntimeContextImpl.execute(BpelRuntimeContextImpl.java:916)
+	at org.apache.ode.bpel.engine.BpelProcess.handleJobDetails(BpelProcess.java:481)
+	at org.apache.ode.bpel.engine.BpelEngineImpl.onScheduledJob(BpelEngineImpl.java:506)
+	at org.apache.ode.bpel.engine.BpelServerImpl.onScheduledJob(BpelServerImpl.java:450)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob$1.call(SimpleScheduler.java:546)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob$1.call(SimpleScheduler.java:540)
+	at org.apache.ode.scheduler.simple.SimpleScheduler.execTransaction(SimpleScheduler.java:289)
+	at org.apache.ode.scheduler.simple.SimpleScheduler.execTransaction(SimpleScheduler.java:244)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob.call(SimpleScheduler.java:540)
+	at org.apache.ode.scheduler.simple.SimpleScheduler$RunJob.call(SimpleScheduler.java:524)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2015-02-11 18:59:15,765 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14292
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:15 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:59:17,881 [ODEServer-3] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 26679
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14293
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:17 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:59:20,426 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14293
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:20 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent
+2015-02-11 18:59:22,864 [ODEServer-1] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessInstanceStartedEvent:
+	RootScopeId = 26688
+	ScopeDeclarationId = 3
+	Type = instanceLifecycle
+	ProcessInstanceId = 14294
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:22 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessInstanceStartedEvent
+2015-02-11 18:59:25,338 [ODEServer-6] INFO  cn.edu.nju.cs.tcao4bpel.epr.TimeLogBpelEventListener  - 
+ProcessCompletionEvent:
+	Type = instanceLifecycle
+	ProcessInstanceId = 14294
+	ProcessId = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2-3
+	ProcessName = {http://cs.nju.edu.cn/tcao4bpel/travel}TravelCase2
+	Timestamp = Wed Feb 11 18:59:25 CST 2015
+	LineNo = -1
+	Class = class org.apache.ode.bpel.evt.ProcessCompletionEvent

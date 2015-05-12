@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<definitions name="LogArtifacts"
+        targetNamespace="http://cs.nju.edu.cn/tcao4bpel/travel/log"
+        xmlns:tns="http://cs.nju.edu.cn/tcao4bpel/travel/log"
+        xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+        xmlns="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:flight="http://flight.webservices.cs.nju.edu.cn"
+       >
+
+
+
+     <import namespace="http://flight.webservices.cs.nju.edu.cn" location="FlightService.wsdl"></import>
+
+     
+ 
+    <plnk:partnerLinkType name="Flight">
+        <plnk:role name="FlightProvider" portType="flight:FlightServicePortType"/>    
+    </plnk:partnerLinkType> 
+
+  
+</definitions>

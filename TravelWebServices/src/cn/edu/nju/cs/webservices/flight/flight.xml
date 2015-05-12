@@ -1,0 +1,14 @@
+<flights>
+  <flight airline="CA" flightId="1883" departure="Beijing" arrival="ShangHai" departureTime="20:15" arrivalTime="22:35" 
+  departureAirport="Capital AirPort T3" arrivalAirport="PuDong AirPort T2" punctuality="86" delayTime="5" price="440"/> 
+  <flight airline="CA" flightId="1501" departure="Beijing" arrival="ShangHai" departureTime="08:30" arrivalTime="10:40" 
+  departureAirport="Capital AirPort T3" arrivalAirport="HongQiao AirPort T2" punctuality="91" delayTime="5" price="1138"/>
+  <flight airline="CZ" flightId="9738" departure="Beijing" arrival="ShangHai" departureTime="08:00" arrivalTime="10:15" 
+  departureAirport="Capital AirPort T2" arrivalAirport="HongQiao AirPort T2" punctuality="100" delayTime="0" price="560"/>
+  <flight airline="CZ" flightId="9736" departure="Beijing" arrival="ShangHai" departureTime="21:30" arrivalTime="23:35" 
+  departureAirport="Capital AirPort T2" arrivalAirport="HongQiao AirPort T2" punctuality="74" delayTime="14" price="545"/>
+  <flight airline="MU" flightId="5102" departure="Beijing" arrival="ShangHai" departureTime="08:00" arrivalTime="10:15" 
+  departureAirport="Capital AirPort T2" arrivalAirport="HongQiao AirPort T2" punctuality="100" delayTime="0" price="535"/>
+  <flight airline="MU" flightId="3821" departure="Beijing" arrival="ShangHai" departureTime="08:25" arrivalTime="10:20" 
+  departureAirport="Nanyuan Airport" arrivalAirport="PuDong AirPort T1" punctuality="86" delayTime="8" price="430"/>
+</flights>

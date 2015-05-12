@@ -1,0 +1,21 @@
+<soap:Envelope 
+xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+<soap:Header>
+</soap:Header>
+<soap:Body>
+<q0:TravelRequest xmlns:q0="http://cs.nju.edu.cn/tcao4bpel/travel">
+  <q0:username>Judy</q0:username>
+  <q0:password>12345</q0:password>
+  <q0:fromlocation>Beijing</q0:fromlocation>
+  <q0:destination>ShangHai</q0:destination>
+  <q0:startDate>2015-02-20T13:11:00.641Z</q0:startDate>
+  <q0:endDate>2015-02-21T13:11:00.641Z</q0:endDate>
+  <q0:phoneNumber>15195806706</q0:phoneNumber>
+</q0:TravelRequest>
+
+</soap:Body>
+</soap:Envelope>
+
+

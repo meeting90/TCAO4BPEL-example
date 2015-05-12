@@ -1,0 +1,6 @@
+<accounts>
+  <account id="Judy" balance="188300000"/> 
+  <account id="Mike" balance="421"/>
+  <account id="David" balance="571"/>
+  <account id="CoCo" balance="125"/>
+</accounts>

@@ -1,0 +1,12 @@
+<hotels>
+ 
+  <hotel city="Nanjing" position="JiangLin" price="596"/>
+  <hotel city="Nanjing" position="ZhuJiangRoad" price="180"/>
+  <hotel city="Nanjing" position="Qixia" price="68"/>
+  <hotel city="ShangHai" position="LuJiaZhui" price="620"/>
+  <hotel city="ShangHai" position="Airport" price="378"/>
+  <hotel city="ShangHai" position="BeiWaiTan" price="370"/>
+  <hotel city="Beijing" position="ZhongGuanCun" price="338"/>
+  <hotel city="Beijing" position="WangFuJing" price="299"/>
+  <hotel city="Beijing" position="QianMeng" price="432"/>
+</hotels>

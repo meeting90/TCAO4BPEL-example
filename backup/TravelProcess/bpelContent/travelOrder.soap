@@ -1,0 +1,11 @@
+<q0:TravelRequest>
+  <q0:username>Judy</q0:username>
+  <q0:password>816706</q0:password>
+  <q0:fromlocation>Beijing</q0:fromlocation>
+  <q0:destination>ShangHai</q0:destination>
+  <q0:startDate>2015-02-12</q0:startDate>
+  <q0:endDate>2015-02-14</q0:endDate>
+  <q0:phoneNumber>1242</q0:phoneNumber>
+</q0:TravelRequest>
+
+

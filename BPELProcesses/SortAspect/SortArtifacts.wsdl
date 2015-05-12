@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<definitions name="SortArtifacts"
+        targetNamespace="http://cs.nju.edu.cn/tcao4bpel/travel/sorting"
+        xmlns:tns="http://cs.nju.edu.cn/tcao4bpel/travel/sorting"
+        xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+        xmlns="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:hotel="http://hotel.webservices.cs.nju.edu.cn"
+       >
+
+
+
+     <import namespace="http://hotel.webservices.cs.nju.edu.cn" location="HotelService.wsdl"></import>
+
+     
+ 
+    <plnk:partnerLinkType name="Hotel">
+        <plnk:role name="HotelProvider" portType="hotel:HotelServicePortType"/>    
+    </plnk:partnerLinkType> 
+
+  
+</definitions>

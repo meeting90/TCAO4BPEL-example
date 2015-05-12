@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployAspect xmlns="http://cn.nju.edu.cs/tcao4bpel/schemas/dd/2015/01" xmlns:ans="http://cs.nju.edu.cn/tcao4bpel/2.0/aspect/logging" xmlns:wns="http://flight.webservices.cs.nju.edu.cn">
+  <aspect name="ans:concurrentLogging">
+	  <invoke partnerLink="flight">
+		<service name="wns:FlightService" port="FlightServiceHttpSoap11Endpoint"/>
+	</invoke>
+  </aspect>
+  </deployAspect>
